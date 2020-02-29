@@ -1,4 +1,4 @@
-function myName(name){
+function myName(){
     var stringName = "naresh";
     var stringlength = stringName.length;
     var reversedString ="";
@@ -11,3 +11,5 @@ function myName(name){
         
     }
 }
+
+myName();
