@@ -17,6 +17,14 @@
 							"",
 							"pm.test(\"Access Denied with invalid username and password\", function () {",
 							"    pm.expect(responseDetails.error.type).to.eql(\"AccessDenied\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 800ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
