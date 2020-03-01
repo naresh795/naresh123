@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "80afabb0-d214-4ad6-adf3-4bbc1c484394",
+		"name": "firmex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8da05bd0-8159-488a-b18e-6cb5ad86ea7a",
+						"exec": [
+							"var responseDetails = pm.response.json();",
+							"",
+							"pm.test(\"Access Denied with invalid username and password\", function () {",
+							"    pm.expect(responseDetails.error.type).to.eql(\"AccessDenied\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "text/plain",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{email: \"naresh.badhan0726@gmail.com\", password: \"gfjyfjf\"};\n",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://login.firmex.com/authenticate/global",
+					"protocol": "https",
+					"host": [
+						"login",
+						"firmex",
+						"com"
+					],
+					"path": [
+						"authenticate",
+						"global"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
