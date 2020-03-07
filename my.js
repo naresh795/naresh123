@@ -1,5 +1,5 @@
 function myName(){
-    var stringName = "badhan";
+    var stringName = "sampletest";
     var stringlength = stringName.length;
     var reversedString ="";
 
