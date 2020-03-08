@@ -1,5 +1,5 @@
 function myName(){
-    var stringName = "badhan";
+    var stringName = "changes made in naresh branch";
     var stringlength = stringName.length;
     var reversedString ="";
 
